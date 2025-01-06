@@ -67,7 +67,11 @@ const Header = () => {
           >
             GPTSearch
           </button>
-          <img src={user?.photoURL} alt="user-icon" className="mr-4" />
+          <img
+            src={"https://cdn-icons-png.flaticon.com/512/2586/2586717.png"}
+            alt="user-icon"
+            className="mr-4"
+          />
           <button onClick={handleSignOut} className="font-bold text-white mr-4">
             SignOut
           </button>
