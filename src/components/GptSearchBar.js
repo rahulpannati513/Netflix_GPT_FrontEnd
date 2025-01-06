@@ -10,11 +10,6 @@ const GptSearchBar = () => {
   const handleGptSearchClick = async () => {
     const userMessage = searchText.current.value.trim();
 
-    if (!userMessage) {
-      alert("Please enter a search query.");
-      return;
-    }
-
     console.log("User Message:", userMessage);
     setIsLoading(true);
     setError(null);
@@ -94,7 +89,7 @@ const GptSearchBar = () => {
         </button>
       </form>
 
-      {isLoading && <p className="mt-4 text-gray-600">Loading...</p>}
+      {isLoading && <p className="mt-4 text-red-600 text-8xl">Loading...</p>}
 
       {error && (
         <div

@@ -16,7 +16,6 @@ const Header = () => {
   const user = useSelector((store) => store.user);
 
   const handleGptSearchClick = () => {
-    //Toggle MyGPT search
     dispatch(toggleGptSearchView());
   };
 
@@ -61,16 +60,16 @@ const Header = () => {
         </Link>
       </div>
       {user && (
-        <div className="size-20 p-4 flex justify-end">
+        <div className="w-20 h-20 p-4 flex justify-end">
           <button
             onClick={() => handleGptSearchClick()}
-            className="py-4 px-4 bg-purple-400 m-2 rounded-lg"
+            className="rounded-lg text-center text-white font-bold mr-4"
           >
             GPTSearch
           </button>
-          <img src={user?.photoURL} alt="user-icon" />
-          <button onClick={handleSignOut} className="font-bold text-white">
-            (Sign Out)
+          <img src={user?.photoURL} alt="user-icon" className="mr-4" />
+          <button onClick={handleSignOut} className="font-bold text-white mr-4">
+            SignOut
           </button>
         </div>
       )}
